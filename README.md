@@ -1,53 +1,134 @@
-# 깃 블로그를 만들었던 과정 소개
+# Lanyon
+
+Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+
+![Lanyon](https://f.cloud.github.com/assets/98681/1825266/be03f014-71b0-11e3-9539-876e61530e24.png)
+![Lanyon with open sidebar](https://f.cloud.github.com/assets/98681/1825267/be04a914-71b0-11e3-966f-8afe9894c729.png)
 
 
+## Contents
+
+- [Usage](#usage)
+- [Options](#options)
+  - [Sidebar menu](#sidebar-menu)
+  - [Themes](#themes)
+  - [Reverse layout](#reverse-layout)
+- [Development](#development)
+- [Author](#author)
+- [License](#license)
+
+
+## Usage
+
+Lanyon is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
+
+
+## Options
+
+Lanyon includes some customizable options, typically applied via classes on the `<body>` element.
+
+
+### Sidebar menu
+
+Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
+
+```
 ---
+layout: page
+title: About
+---
+```
 
-## 1. repo 만들기
-우선 github blog 페이지를 만들기 위해 가장 먼저 
-저의 아이디와 github.io를 합친 jch618.github.io 라는 이름의 레포지토리를 만들어 주었습니다.
+**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` layout.
 
-그 후에 git bash를 열고
-`git clone https://github.com/jch618/jch618.github.io`
-명령어를 이용해서 로컬 저장소에 레포지토리를 가져왔습니다.
 
-## 2. jekyll 깔기
-github 블로그를 정적 웹사이트로 만들어주는 jekyll를 다운 받기 위해서
-우선 <https://rubyinstaller.org/downloads/>에 들어가 알맞은 파일을 설치한 후에
-명령 프롬프트 창을 열고 `gem install jekyll bunder` 를 사용하여 jekyll을 설치한 후에
-`jekyll -v`를 사용해서 설치가 잘 되었는지 확인하였습니다.
+### Themes
 
-## 3. 테마 적용하기
-제가 선택한 테마는 *jekyll-gitbook*테마입니다.
-우선 <https://github.com/sighingnow/jekyll-gitbook> 다음 사이트에 접속하여
-`git clone` 명령어를 이용해서 로컬 레포지토리에 가져온 뒤
-파일들을 복사하여 1번에서 미리 만들어두었던 jch618.github.io 로컬 레포지토리에 붙여넣었니다.
-그러나 처음 몇 번 동안 파일들을 붙여넣은 후 `jekyll serve`를 했을 때
-라이브러리 오류가 발생하여 몇 번의 시도 끝에 `bundle update`와 `bundle install` 명령어를 
-이용하여 추가적인 파일들을 다운로드하고 난 후에야 오류가 발생하지 않는다는 사실을 알게 되었습니다.
+Lanyon ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
 
-아무튼 이렇게 테마를 적용한 후에는 `git add`, `git commit`, `git push` 명령어를
-사용하여 원격 레포지토리에 저장했습니다.
+![Lanyon with red theme](https://f.cloud.github.com/assets/98681/1825270/be065110-71b0-11e3-9ed8-9b8de753a4af.png)
+![Lanyon with red theme and open sidebar](https://f.cloud.github.com/assets/98681/1825269/be05ec20-71b0-11e3-91ea-a9138ef07186.png)
 
-또한 github의 **settings-pages**에 들어가 저의 사이트의 주소가 https://jch618.github.io/로 되어있는 것도 확인했습니다.
+There are eight themes available at this time.
 
-## 4. 댓글 적용하기
-**댓글** 기능을 적용하기 위해 저는 **disqus**를 사용하였습니다.
-*[disqus 사이트](https://disqus.com/)* 에 접속하여 가입한 뒤
-**Admin** 페이지에 접속하여 새로운 사이트를 추가하였습니다. 저 같은 경우에는 웹사이트 이름을 'dolmangs'로 지정하였습니다.
-각종 설정 후에 **Installing Disqus**페이지에 들어가 **jekyll**을 선택한 후
-[Universal Embed Code](https://dolmangs.disqus.com/admin/install/platforms/universalcode)에 들어가 나와있는 코드를 복사하여
-저의 로컬 repo에 `_config.yml`파일의 하단에
+![Available theme classes](https://f.cloud.github.com/assets/98681/1817044/e5b0ec06-6f68-11e3-83d7-acd1942797a1.png)
 
-`
-comment: 
-  provider:         "disqus"
-  disqus:
-    shortname:      "dolmangs"
-`
+To use a theme, add any one of the available theme classes to the `<body>` element in the `default.html` layout, like so:
 
-와 같은 코드를 추가해주고 
+```html
+<body class="theme-base-08">
+  ...
+</body>
+```
 
-`_layouts/post.html` 파일에 하단의 아까 복사했던 코드와 조건이 담긴 약간의 코드를 더하여
-파일의 하단에 추가해주었습니다.
+To create your own theme, look to the Themes section of [included CSS file](https://github.com/poole/lanyon/blob/master/public/css/lanyon.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
 
+
+### Reverse layout
+
+![Lanyon with reverse layout](https://f.cloud.github.com/assets/98681/1825265/be03f2e4-71b0-11e3-89f1-360705524495.png)
+![Lanyon with reverse layout and open sidebar](https://f.cloud.github.com/assets/98681/1825268/be056174-71b0-11e3-88c8-5055bca4307f.png)
+
+Reverse the page orientation with a single class.
+
+```html
+<body class="layout-reverse">
+  ...
+</body>
+```
+
+
+### Sidebar overlay instead of push
+
+Make the sidebar overlap the viewport content with a single class:
+
+```html
+<body class="sidebar-overlay">
+  ...
+</body>
+```
+
+This will keep the content stationary and slide in the sidebar over the side content. It also adds a `box-shadow` based outline to the toggle for contrast against backgrounds, as well as a `box-shadow` on the sidebar for depth.
+
+It's also available for a reversed layout when you add both classes:
+
+```html
+<body class="layout-reverse sidebar-overlay">
+  ...
+</body>
+```
+
+### Sidebar open on page load
+
+Show an open sidebar on page load by modifying the `<input>` tag within the `sidebar.html` layout to add the `checked` boolean attribute:
+
+```html
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" checked>
+```
+
+Using Liquid you can also conditionally show the sidebar open on a per-page basis. For example, here's how you could have it open on the homepage only:
+
+```html
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" {% if page.title =="Home" %}checked{% endif %}>
+```
+
+## Development
+
+Lanyon has two branches, but only one is used for active development.
+
+- `master` for development.  **All pull requests should be to submitted against `master`.**
+- `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
+
+
+## Author
+
+**Mark Otto**
+- <https://github.com/mdo>
+- <https://twitter.com/mdo>
+
+
+## License
+
+Open sourced under the [MIT license](LICENSE.md).
+
+<3
