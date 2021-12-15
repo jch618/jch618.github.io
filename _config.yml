@@ -1,8 +1,8 @@
 # Configurations
 title:            Jekyll Gitbook
 longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+author:           chanha Jung
+email:            jch618@naver.com
 description: >
   Build Jekyll site with the GitBook style.
 
@@ -52,3 +52,9 @@ regenerate:       true
 plugins:
   - jekyll-feed
   - jemoji
+
+comments: 
+  provider:         "disqus"
+  disqus:
+    shortname:      "dolmangs"
+
