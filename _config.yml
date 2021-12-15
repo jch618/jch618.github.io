@@ -9,9 +9,9 @@ permalink:           pretty
 
 # About/contact
 author:             
-  name:              chanha Jung            
-  url:               https://jch618.github.io
-  email:             jch618@naver.com
+  name:              'chanha Jung'
+  url:               'https://jch618.github.io'
+  email:             'jch618@naver.com'
 
 # Gems
 plugins:
