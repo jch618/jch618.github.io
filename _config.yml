@@ -53,7 +53,7 @@ plugins:
   - jekyll-feed
   - jemoji
 
-comments: 
+comment: 
   provider:         "disqus"
   disqus:
     shortname:      "dolmangs"
