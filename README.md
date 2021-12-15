@@ -33,20 +33,24 @@ github 블로그를 정적 웹사이트로 만들어주는 jekyll를 다운 받�
 
 ## 4. 댓글 적용하기
 **댓글** 기능을 적용하기 위해 저는 **disqus**를 사용하였습니다.
-*[disqus 사이트](https://disqus.com/)*에 접속하여 가입한 뒤
+*[disqus 사이트](https://disqus.com/)* 에 접속하여 가입한 뒤
 **Admin** 페이지에 접속하여 새로운 사이트를 추가하였습니다. 저 같은 경우에는 웹사이트 이름을 'dolmangs'로 지정하였습니다.
 각종 설정 후에 **Installing Disqus**페이지에 들어가 **jekyll**을 선택한 후
 [Universal Embed Code](https://dolmangs.disqus.com/admin/install/platforms/universalcode)에 들어가 나와있는 코드를 복사하여
 저의 로컬 repo에 `_config.yml`파일의 하단에
-```
+
+`
 comment: 
   provider:         "disqus"
   disqus:
     shortname:      "dolmangs"
-``` 와 같은 코드를 추가해주고 
+`
+
+와 같은 코드를 추가해주고 
 
 `_layouts/post.html` 파일에 하단의 아까 복사했던 코드와 약간의 코드를 더하여
-```
+
+`
 {% if page.comments %}
 <h2>Comments</h2>
 <div id="disqus_thread"></div>
@@ -69,5 +73,7 @@ comment:
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 {% endif %}
-``` 다음과 같은 코드를 파일의 하단에 추가해주었습니다.
+`
+
+다음과 같은 코드를 파일의 하단에 추가해주었습니다.
 
