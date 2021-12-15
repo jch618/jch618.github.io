@@ -56,5 +56,5 @@ plugins:
 comment: 
   provider:         "disqus"
   disqus:
-    shortname:      "dolmangs"
+    shortname:      "jch618"
 
