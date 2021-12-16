@@ -1,4 +1,4 @@
-![킬리만자로](./image/kilimanjaro.jpg)
+![킬리만자로](./img/kilimanjaro.jpg)
 
 # 깃 블로그를 만들었던 과정 소개
 
