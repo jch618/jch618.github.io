@@ -91,7 +91,7 @@ layon 테마를 적용하고 나니 저절로 **사이드 메뉴**에 **Download
 `google-analytics.html`파일을 불러오도록 하였습니다.
 
 
-이 내용을 커밋한 후에 <jch618.github.io>를 몇 개의 기기로 접속한 후
+이 내용을 커밋한 후에 [jch618.github.io](https://jch618.github.io)를 몇 개의 기기로 접속한 후
 google analytics 사이트의 **보고서**항목을 살펴보니
 
 ![google analytics 사진](./img/google.PNG)
