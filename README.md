@@ -33,7 +33,7 @@ github 블로그를 정적 웹사이트로 만들어주는 jekyll를 다운 받�
 아무튼 이렇게 테마를 적용한 후에는 `git add`, `git commit`, `git push` 명령어를
 사용하여 원격 레포지토리에 저장했습니다.
 
-또한 github의 **settings-pages**에 들어가 저의 사이트의 주소가 https://jch618.github.io/로 되어있는 것도 확인했습니다.
+또한 github의 **settings-pages**에 들어가 저의 사이트의 주소가 <https://jch618.github.io/>로 되어있는 것도 확인했습니다.
 
 ## 4. 댓글 적용하기
 **댓글** 기능을 적용하기 위해 저는 **disqus**를 사용하였습니다.
