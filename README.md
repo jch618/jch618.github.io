@@ -2,7 +2,7 @@
 
 # 깃 블로그를 만들었던 과정 소개
 
-![킬리만자로](./img/kilimanjaro.jpg){: width="100%" height="100%"}
+![킬리만자로](./img/kilimanjaro.jpg){: width="75%" height="50%"}
 
 
 ---
