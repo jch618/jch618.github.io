@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-###안녕하세요
+### 안녕하세요
 
 
 이 블로그는 jekyll을 사용하여 정적페이지로 만들어졌으며
