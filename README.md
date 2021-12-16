@@ -1,4 +1,4 @@
-![kilimanjaro mountain](https://www.bing.com/images/search?view=detailV2&ccid=oLAIsu2j&id=2972F402FD014D028B1EE22450C9AA697FE9BE43&thid=OIP.oLAIsu2jz1ABCgZVtLH5QAHaFj&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.a0b008b2eda3cf50010a0655b4b1f940%3frik%3dQ77pf2mqyVAk4g%26riu%3dhttp%253a%252f%252fwww.nemopan.com%252ffiles%252fattach%252fimages%252f2575%252f376%252f460%252f48dcaf0e5a9d0.jpg%26ehk%3di1SWlD59M4wwpQQKUyOmYqfIQFQNszN7xJmyi2c5pL0%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=768&expw=1024&q=%ed%82%ac%eb%a6%ac%eb%a7%8c%ec%9e%90%eb%a1%9c+%ec%82%b0&simid=608019768457759634&FORM=IRPRST&ck=29EC1D43460DC1BAB671445408E5689A&selectedIndex=0&ajaxhist=0&ajaxserp=0)
+![킬리만자로](./image/kilimanjaro.jpg)
 
 # 깃 블로그를 만들었던 과정 소개
 
