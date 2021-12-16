@@ -60,3 +60,41 @@ layon 테마를 적용하고 나니 저절로 **사이드 메뉴**에 **Download
 이를 수정할 수 있다는 것을 친구를 통해 알게 되었고 저는 과감히 **Downlads**와 **Github-page**메뉴를 삭제해서
 이 문제를 해결하였습니다.
 
+
+## 5. Google Analytics 적용하기
+
+우선 **google analytics**를 적용하기 위하여 [google analytics]<www.google.com/analytics>에 접속하여
+회원가입을 하고 내 계정을 만든 다음 데이터 스트림을 만들었습니다.
+
+그 후에 `tracking ID`를 `_config.yml` 파일에 `google-analytics` 다음과 같이 저장해주고
+`includes/` 디렉토리에 들어가 **google-analytics.html** 파일을 만든 후 파일 안에
+
+
+``` HTML
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google-analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ site.google-analytics }}');
+</script>
+```
+
+다음과 같은 코드를 삽입하고 `_includes/head.html`파일에 들어가 `<head>`바로 
+아랫 부분에 `{% include google-analytics.html %}` 다음과 같은 코드를 삽입하여
+`google-analytics.html`파일을 불러오도록 하였습니다.
+
+
+이 내용을 커밋한 후에 <jch618.github.io>를 몇 개의 기기로 접속한 후
+google analytics 사이트의 **보고서**항목을 살펴보니
+
+![google analytics 사진](./img/google.PNG)
+
+다음과 같이 사용자가 접속한 기록이 남아 있음을 확인할 수 있었습니다.
+
+
+그럼 제 글을 읽어주셔서 감사합니다.
+
+
