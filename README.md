@@ -2,7 +2,7 @@
 
 # 깃 블로그를 만들었던 과정 소개
 
-<img src="./img/kilimanjaro.jpg" width="200" height="400"/>
+<img src="./img/kilimanjaro.jpg" width="75%" height="100%"/>
 
 
 ---
