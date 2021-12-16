@@ -67,7 +67,7 @@ layon 테마를 적용하고 나니 저절로 **사이드 메뉴**에 **Download
 
 ## 5. Google Analytics 적용하기
 
-우선 **google analytics**를 적용하기 위하여 [google analytics]<www.google.com/analytics>에 접속하여
+우선 **google analytics**를 적용하기 위하여 [google analytics](www.google.com/analytics)에 접속하여
 회원가입을 하고 내 계정을 만든 다음 데이터 스트림을 만들었습니다.
 
 그 후에 `tracking ID`를 `_config.yml` 파일에 `google-analytics` 다음과 같이 저장해주고
